@@ -46,6 +46,8 @@
             this.btnEqual = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
             this.txtNumber = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnPercent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClear
@@ -229,11 +231,33 @@
             this.txtNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtNumber.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(77, 190);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(99, 55);
+            this.btnBack.TabIndex = 18;
+            this.btnBack.Text = ">>";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnPercent
+            // 
+            this.btnPercent.Location = new System.Drawing.Point(77, 312);
+            this.btnPercent.Name = "btnPercent";
+            this.btnPercent.Size = new System.Drawing.Size(99, 55);
+            this.btnPercent.TabIndex = 19;
+            this.btnPercent.Text = "%";
+            this.btnPercent.UseVisualStyleBackColor = true;
+            this.btnPercent.Click += new System.EventHandler(this.btnPercent_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnPercent);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtNumber);
             this.Controls.Add(this.btnZero);
             this.Controls.Add(this.btnEqual);
@@ -279,6 +303,8 @@
         private System.Windows.Forms.Button btnEqual;
         private System.Windows.Forms.Button btnZero;
         private System.Windows.Forms.TextBox txtNumber;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnPercent;
     }
 }
 

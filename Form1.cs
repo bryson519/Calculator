@@ -93,7 +93,8 @@ namespace Calculator
         private void btnZero_Click(object sender, EventArgs e)
         {
             if (txtNumber.Text == "0")
-                txtNumber.Text = txtNumber.Text + "0";
+                txtNumber.Text = "";
+            txtNumber.Text = txtNumber.Text + "0";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -170,6 +171,25 @@ namespace Calculator
             firstNumber = 0f;
             secondNumber = 0f;
             operators = -1;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if (txtNumber.Text.Length > 1)
+            {
+                txtNumber.Text = txtNumber.Text.Substring(0, txtNumber.Text.Length - 1);
+            }
+            else
+            {
+                txtNumber.Text = "0";
+            }
+        }
+
+        private void btnPercent_Click(object sender, EventArgs e)
+        {
+            float number = Convert.ToSingle(txtNumber.Text);
+            number = number / 100f;
+            txtNumber.Text = number.ToString();
         }
 
         int operators = -1; // 記錄選擇哪一種運算符號？0:加、1:減、2:乘、3:除、-1:重新設定
