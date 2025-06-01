@@ -147,6 +147,7 @@
             this.btnOne.TabIndex = 10;
             this.btnOne.Text = "1";
             this.btnOne.UseVisualStyleBackColor = true;
+            this.btnOne.Click += new System.EventHandler(this.btnOne_Click);
             // 
             // btnThree
             // 
